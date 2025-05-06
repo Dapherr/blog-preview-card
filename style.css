@@ -49,6 +49,7 @@ body {
     letter-spacing: 0px;
     text-align: center;
     color: hsl(0, 0%, 7%);
+    margin-bottom: 6px;
 }
 
 .card-date {
@@ -57,6 +58,7 @@ body {
     line-height: 150%;
     letter-spacing: 0px;
     color: hsl(0, 0%, 7%);
+    margin-bottom: 6px;
 }
 
 .card-title {
@@ -65,6 +67,11 @@ body {
     line-height: 150%;
     letter-spacing: 0px;
     color: hsl(0, 0%, 7%);
+    text-decoration: none;
+}
+
+.card-title:focus-visible {
+      outline: 1px solid blue;
 }
 
 .card-title:hover {
@@ -77,16 +84,18 @@ body {
     line-height: 150%;
     letter-spacing: 0px;
     color: hsl(0, 0%, 42%);
+    margin: 6px 0;
 }
 
 .card-text {
-    padding-top: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 #card-author {
     display: flex;
     gap: 12px;
-    padding: 24px;
+    margin: 24px;
 }
 
 .author-image {
@@ -105,3 +114,34 @@ body {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 375px) {
+    #card {
+        max-width: 328px;
+        min-height: 475px;
+    }
+
+    .card-image {
+        max-width: 279px;
+    }
+
+    .card-category {
+        max-width: 73px;
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .card-date {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-description {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+}
